@@ -17,7 +17,7 @@ const GlassBadge: React.FC<GlassBadgeProps> = ({
 }) => {
   return (
     <div
-      className="absolute z-30 flex items-center justify-center"
+      className="absolute z-30 flex items-center justify-center font-['Montserrat']"
       style={{
         width,
         height,

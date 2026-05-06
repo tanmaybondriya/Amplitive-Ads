@@ -152,7 +152,7 @@ function CampaignSteps() {
         {CAMPAIGN_STEPS.map((step, i) => (
           <React.Fragment key={`branch-${i}`}>
             <div
-              className="absolute h-[1px]"
+              className="absolute h-[1px] font-normal"
               style={{
                 top: `${step.top}px`,
                 left: "0px",
@@ -364,7 +364,7 @@ function DesktopAdsMockup() {
       {/* Search bar */}
       <div className="absolute top-0 left-[65px] z-30 flex h-[51.88px] w-[325px] items-center gap-3 rounded-[92.94px] border border-white/15 bg-black/15 px-4 shadow-[inset_4.65px_4.65px_41.82px_0px_rgba(117,186,255,0.12),inset_4.65px_4.65px_41.82px_0px_rgba(91,236,113,0.05)]">
         <div className="relative h-3.5 w-3.5 rounded-full border-2 border-white after:absolute after:-bottom-1 after:-right-1 after:h-1.5 after:w-[2px] after:rotate-[-45deg] after:bg-white after:content-['']" />
-        <span className="font-['Urbanist'] text-[16.26px] font-normal leading-none text-white">
+        <span className="font-normal text-[16.26px] leading-none text-white">
           Search Campaigns
         </span>
       </div>
@@ -374,7 +374,7 @@ function DesktopAdsMockup() {
         <span className="text-[30px] font-light leading-none text-white">
           +
         </span>
-        <span className="font-['Urbanist'] text-[15.35px] font-normal leading-none text-white">
+        <span className="font-normal text-[14px] font-normal leading-none text-white">
           Create Campaign
         </span>
       </div>
@@ -417,7 +417,7 @@ export default function HeroSection() {
               <button className="px-6 py-3 rounded-lg text-[13px] font-medium text-white/90 bg-[#1e2e46] hover:bg-[#2a4060] transition-all border border-white/5 shadow-sm">
                 Request Demo
               </button>
-              <button className="flex items-center gap-2 px-8 py-3 rounded-lg text-[13px] font-semibold text-[#020a16] bg-white hover:bg-gray-100 transition-all shadow-[0_0_15px_rgba(255,255,255,0.15)]">
+              <button className=" flex items-center gap-2 px-8 py-3 rounded-lg text-[14px] font-semibold text-[#020a16] bg-white hover:bg-gray-100 transition-all shadow-[0_0_15px_rgba(255,255,255,0.15)]">
                 See Pricing
                 <svg
                   width="14"
@@ -456,7 +456,7 @@ export default function HeroSection() {
         </h1>
 
         {/* Description */}
-        <p className="text-[13px] text-white/60 leading-[1.7] mb-6 max-w-[320px]">
+        <p className="text-[13px] text-left text-white/60 leading-[1.7] mb-6 max-w-[320px]">
           Connect campaigns, assets, and workflows—so execution stays aligned
           across your entire system.
         </p>
