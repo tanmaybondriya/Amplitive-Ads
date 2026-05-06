@@ -1,11 +1,5 @@
 "use client";
-
-// components/HeroSection.tsx
-// Renders the hero — desktop (ads mockup + analytics chart) and mobile (preview card).
-// Drop this directly inside your page; HeroBackground is rendered separately.
-
 import { useState } from "react";
-import Image from "next/image";
 import React from "react";
 
 import Dot from "@/components/Dot";
@@ -138,9 +132,6 @@ const CAMPAIGN_STEPS = [
   },
 ] as const;
 
-// tops of the faint horizontal connector lines between step cards and analytics box
-const CONNECTOR_TOPS = [196, 249, 302, 355];
-
 // ─── Private sub-components ───────────────────────────────────────────────────
 
 function CampaignSteps() {
@@ -236,6 +227,16 @@ function AdsAnalyticsBox() {
         backdropFilter: "blur(10.2px)",
       }}
     >
+      <div
+        className="absolute -top-[140px] -left-[140px] w-[320px] h-[320px] opacity-40 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(49.66% 53.44% at 50.05% 48.11%, #5BEC71 0%, #0F72D7 100%)",
+          filter: "blur(94px)",
+          WebkitFilter: "blur(94px)",
+          borderRadius: "9999px",
+        }}
+      />
       <div className="relative z-10 flex flex-col h-full font-urbanist">
         <p className="text-white text-[16px] font-medium mt-[18.7px] text-center opacity-90">
           Ads Analytics
@@ -284,8 +285,9 @@ function AdsAnalyticsBox() {
             className="absolute"
             style={{
               width: "431.81px",
-              height: "256.90px",
+              height: "221px",
               top: "70px",
+              bottom: "px",
               left: "37.25px",
             }}
           >
@@ -334,10 +336,10 @@ function AdsAnalyticsBox() {
                 fill="none"
               />
             </svg>
-            <Dot top="-6.33px" left="180.34px" />
-            <Dot top="69px" left="96px" />
-            <Dot top="50.67px" left="247.34px" />
-            <Dot top="60px" left="318.34px" />
+            <Dot top="-6px" left="180.34px" />
+            <Dot top="59px" left="96px" />
+            <Dot top="43.67px" left="247.34px" />
+            <Dot top="52px" left="318.34px" />
             <Dot top="-4.33px" left="390px" />
           </div>
 
@@ -378,22 +380,6 @@ function DesktopAdsMockup() {
       </div>
 
       <CampaignSteps />
-
-      {/* Faint horizontal lines connecting steps → analytics box */}
-      {CONNECTOR_TOPS.map((top) => (
-        <div
-          key={top}
-          className="absolute z-10"
-          style={{
-            top: `${top}px`,
-            left: "175px",
-            width: "55px",
-            height: "1px",
-            background: "rgba(255,255,255,0.15)",
-          }}
-        />
-      ))}
-
       <AdsAnalyticsBox />
     </div>
   );
@@ -406,17 +392,6 @@ export default function HeroSection() {
 
   return (
     <div className="relative w-full overflow-hidden">
-      <div className="absolute -top-40 left-0 w-full h-[100px] z-0 flex justify-center pointer-events-none">
-        <div
-          className="absolute w-[430px] h-[600px]"
-          style={{
-            background:
-              "radial-gradient(49.66% 53.44% at 50.05% 48.11%, #5BEC71 30.37%, #0F72D7 87.01%)",
-            filter: "blur(180px)", // reduce from 604 (too heavy)
-            opacity: 0.6,
-          }}
-        />
-      </div>
       {/* ── DESKTOP (lg+) ── */}
       <div className="relative w-full z-10 h-auto items-center justify-center hidden lg:flex flex-col items-center text-center px-5 pt-14 pb-8">
         <div className="relative w-full max-w-[1400px] h-[600px] flex items-center justify-between px-20 z-10">
@@ -425,7 +400,7 @@ export default function HeroSection() {
             <div className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full mb-5 w-max bg-white/10 backdrop-blur-xl backdrop-saturate-150 border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.25),inset_0_-0.5px_0_rgba(0,0,0,0.1),0_4px_16px_rgba(0,0,0,0.18)] text-[12px] font-medium text-white/90 tracking-wide [text-shadow:0_1px_2px_rgba(0,0,0,0.25)]">
               Ads
             </div>
-            <h1 className="text-[44px] font-medium leading-[1.2] text-white mb-4">
+            <h1 className="text-[44px] text-left font-medium leading-[1.2] text-white mb-4">
               Run ad execution as
               <br />
               part of your

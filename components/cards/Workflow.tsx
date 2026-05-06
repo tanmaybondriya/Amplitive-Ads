@@ -102,89 +102,116 @@ function CampaignSteps() {
 }
 
 const WorkflowAlignmentCard = () => (
-  <FeatureCard
-    title="Workflow Alignment"
-    description="Coordinate launch steps, deadlines, and stakeholders with fewer disconnected handoffs."
-    icon={
-      <svg
-        width="38"
-        height="38"
-        viewBox="0 0 38 38"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
+  <div className="rounded-3xl overflow-hidden">
+    <FeatureCard
+      title="Workflow Alignment"
+      description="Coordinate launch steps, deadlines, and stakeholders with fewer disconnected handoffs."
+      icon={
+        <svg
           width="38"
           height="38"
-          rx="5.4"
-          fill="url(#paint0_linear_123_1255)"
-        />
-        <g clipPath="url(#clip0_123_1255)">
-          <path
-            d="M21.5 10.6666H16.5V15.6666H21.5V10.6666Z"
-            stroke="white"
-            strokeWidth="1.66667"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+          viewBox="0 0 38 38"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            width="38"
+            height="38"
+            rx="5.4"
+            fill="url(#paint0_linear_123_1255)"
           />
-          <path
-            d="M27.3333 22.3334H22.3333V27.3334H27.3333V22.3334Z"
-            stroke="white"
-            strokeWidth="1.66667"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M15.6667 22.3334H10.6667V27.3334H15.6667V22.3334Z"
-            stroke="white"
-            strokeWidth="1.66667"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M13.1667 22.3333V19H24.8333V22.3333"
-            stroke="white"
-            strokeWidth="1.66667"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M19 19V15.6666"
-            stroke="white"
-            strokeWidth="1.66667"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </g>
-        <defs>
-          <linearGradient
-            id="paint0_linear_123_1255"
-            x1="38"
-            y1="-1.20327e-06"
-            x2="4.75"
-            y2="40.375"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#ACD5FF" />
-            <stop offset="1" stopColor="#003F9D" />
-          </linearGradient>
-          <clipPath id="clip0_123_1255">
-            <rect
-              width="20"
-              height="20"
-              fill="white"
-              transform="translate(9 9)"
+          <g clipPath="url(#clip0_123_1255)">
+            <path
+              d="M21.5 10.6666H16.5V15.6666H21.5V10.6666Z"
+              stroke="white"
+              strokeWidth="1.66667"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
-          </clipPath>
-        </defs>
-      </svg>
-    }
-    iconBg=""
-  >
-    <div className="relative w-full h-full -ml-4 scale-[0.65] md:scale-[0.85] origin-top-left">
-      <CampaignSteps />
-    </div>
-  </FeatureCard>
+            <path
+              d="M27.3333 22.3334H22.3333V27.3334H27.3333V22.3334Z"
+              stroke="white"
+              strokeWidth="1.66667"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M15.6667 22.3334H10.6667V27.3334H15.6667V22.3334Z"
+              stroke="white"
+              strokeWidth="1.66667"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M13.1667 22.3333V19H24.8333V22.3333"
+              stroke="white"
+              strokeWidth="1.66667"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M19 19V15.6666"
+              stroke="white"
+              strokeWidth="1.66667"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </g>
+          <defs>
+            <linearGradient
+              id="paint0_linear_123_1255"
+              x1="38"
+              y1="-1.20327e-06"
+              x2="4.75"
+              y2="40.375"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#ACD5FF" />
+              <stop offset="1" stopColor="#003F9D" />
+            </linearGradient>
+            <clipPath id="clip0_123_1255">
+              <rect
+                width="20"
+                height="20"
+                fill="white"
+                transform="translate(9 9)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      }
+      iconBg=""
+    >
+      <div
+        className="absolute left-[-140px] bottom-[-180px] w-[320px] h-[320px] opacity-30 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(49.66% 53.44% at 50.05% 48.11%, #5BEC71 0%, #0F72D7 100%)",
+          filter: "blur(100px)",
+          WebkitFilter: "blur(100px)",
+          borderRadius: "9999px",
+        }}
+      />
+      <div
+        className="absolute left-0 bottom-0 pointer-events-none w-[70%] h-[85%] opacity-60"
+        style={{
+          backgroundImage: `
+      linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px)
+    `,
+          backgroundSize: "52px 52px",
+          maskImage:
+            "radial-gradient(circle at 0% 100%, black, transparent 75%)",
+          WebkitMaskImage:
+            "radial-gradient(circle at 0% 100%, black, transparent 75%)",
+        }}
+      />
+      <div className="relative -top-15 md:top-0 w-full h-full flex justify-center md:block scale-[0.9] md:scale-[0.85] origin-top">
+        {" "}
+        <CampaignSteps />
+      </div>
+    </FeatureCard>
+  </div>
 );
 
 export default WorkflowAlignmentCard;

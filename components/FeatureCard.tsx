@@ -15,12 +15,12 @@ const FeatureCard = ({
   iconBg,
   children,
 }: FeatureProps) => (
-  <div className="relative rounded-3xl border border-slate-800 bg-slate-900/50 p-6 md:p-8 flex flex-col h-auto md:h-100 min-h-[373px] md:min-h-0 md:min-w-0">
-    <div className="flex items-center gap-3 mb-3 md:mb-4">
+  <div className="relative rounded-3xl border border-slate-800 bg-slate-900/50 flex flex-col h-auto md:h-100 min-h-[373px] md:min-h-0 md:min-w-0">
+    <div className="flex items-center pt-2 pl-3 md:pl-3 gap-3 mb-3 md:mb-4">
       <div className={`p-2 rounded-lg ${iconBg} bg-opacity-20`}>{icon}</div>
       <h3 className="text-lg md:text-xl font-semibold text-white">{title}</h3>
     </div>
-    <p className="text-slate-400 text-sm mb-5 md:mb-8 max-w-[90%]">
+    <p className="text-slate-400 text-sm mb-5 pl-3 md:pl-5 md:mb-8 max-w-[90%]">
       {description}
     </p>
 
