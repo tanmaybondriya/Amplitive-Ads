@@ -8,7 +8,6 @@ import { useState } from "react";
 import Image from "next/image";
 import React from "react";
 
-import men from "@/public/men.png";
 import Dot from "@/components/Dot";
 import GlassBadge from "@/components/GlassBadge";
 
@@ -396,76 +395,6 @@ function DesktopAdsMockup() {
       ))}
 
       <AdsAnalyticsBox />
-    </div>
-  );
-}
-
-function MobilePreviewCard({
-  activeTab,
-  setActiveTab,
-}: {
-  activeTab: string;
-  setActiveTab: (t: string) => void;
-}) {
-  return (
-    <div
-      className="w-full max-w-[320px] rounded-[18px] border border-[#2d6f8e]/50 overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(180deg, rgba(16,44,66,0.92) 0%, rgba(9,23,41,0.98) 100%)",
-        boxShadow: "0 20px 50px rgba(0,0,0,0.7)",
-      }}
-    >
-      {/* Tab switcher */}
-      <div className="flex justify-center pt-4 pb-2 px-3">
-        <div className="flex items-center gap-0.5 p-0.5 rounded-full bg-[#0c182e]/80 border border-white/10">
-          {TABS.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-3 py-1.5 rounded-full text-[10px] font-medium transition-all ${
-                activeTab === tab ? "bg-white text-[#020a16]" : "text-white/60"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Prompt area */}
-      <div className="px-4 pb-4">
-        <p className="text-[12px] text-white/80 font-medium text-center mb-2.5">
-          Describe the image you want to create
-        </p>
-        <div className="bg-white rounded-[10px] p-3">
-          <p className="text-[10px] text-[#444] leading-[1.6] mb-3">
-            Hyperrealistic modern marketing agency concept...
-          </p>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-1.5 text-[9px] text-gray-500 font-semibold">
-              <div className="relative w-[26px] h-[15px] rounded-full bg-[#0F72D7]">
-                <div className="absolute w-[10px] h-[10px] rounded-full bg-white top-[2.5px] right-[2.5px]" />
-              </div>
-              Enhance Prompt
-            </div>
-            <button className="flex items-center justify-center rounded-[7px] text-[10px] font-semibold text-white bg-gradient-to-r from-[#5BEC71] via-[#3ab4aa] to-[#0F72D7] px-3.5 py-1.5">
-              Generate
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Decorative image strip */}
-      <div className="relative w-full h-[110px] overflow-hidden">
-        <Image
-          src={men}
-          alt="Preview"
-          fill
-          className="object-cover object-top opacity-70"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#09172a] via-[#09172a]/30 to-transparent" />
-      </div>
     </div>
   );
 }
