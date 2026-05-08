@@ -449,7 +449,7 @@ export default function HeroSection() {
 
         {/* Heading */}
         <h1 className="text-[26px] font-medium leading-[1.3] text-white mb-4">
-          Run ad execution as part of your business operations{" "}
+          Run outbound inside {" "}
           <span className="bg-gradient-to-r from-[#5BEC71] to-[#00A3FF] bg-clip-text text-transparent font-semibold">
             marketing operation
           </span>
